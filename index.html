@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Práctica</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.lettering-0.6.1.min.js"></script>
+	<script src="js/jquery.scrollorama.js"></script>
+</head>
+<body>
+
+	<div class="crono">
+		<div id="titulo"><h1>Planeta  Universo</h1></div>
+		<div id="titulo"><h1>Prueba de Scroll Imagenes</h1></div>
+	</div>
+	
+
+	<div class="contenido">
+		<div id="a">
+			<h1>Prueba 1</h1>
+			<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+		</div>
+		<div id="b">
+			<h1>Prueba 2
+			</h1>
+			<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+		</div>
+		<div id="c"></div>
+		<div id="d"></div>
+		<div id="e"></div>
+		<div id="f"></div>
+	</div>
+<script>
+$(document).on("ready", banner);
+function banner(){
+         var scrollorama = $.scrollorama({ blocks:'.contenido'});
+
+
+		 //scrollorama.animate('#a',{ duration: 300, property:'opacity', start:0,end:1});
+		 scrollorama.animate('#a',{ duration: 600, property:'left', end:-550});
+		 scrollorama.animate('#a',{ duration: 600, property:'opacity', start:1,end:0});
+         scrollorama.animate('#b',{ duration: 600, property:'right',end:-550});
+         scrollorama.animate('#b',{ duration: 600, property:'opacity', start:1,end:0});
+         scrollorama.animate('#e',{ duration: 300, property:'right', start:-150});
+         scrollorama.animate('#d',{ delay:500, duration: 300, property:'opacity', start:1,end:0});
+         scrollorama.animate('#f',{ delay:500, duration: 300, property:'right', start:-150});
+         scrollorama.animate('#g',{ delay:900, duration: 300, property:'opacity', start:0,end:1});
+};
+</script>
+</body>
+</html>
